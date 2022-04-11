@@ -5,6 +5,7 @@ import com.springit.springit.domain.Comment;
 import com.springit.springit.domain.Link;
 import com.springit.springit.repository.CommentRepository;
 import com.springit.springit.repository.LinkRepository;
+import org.ocpsoft.prettytime.PrettyTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +46,9 @@ public class SpringitApplication {
 			System.out.println(firstLink.getTitle());
 		};
 	}
-}
+
+	@Bean
+	PrettyTime prettyTime() {
+		return new PrettyTime();
+	}
+ }

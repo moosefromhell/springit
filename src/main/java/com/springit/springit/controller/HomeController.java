@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String home(Model model, HttpServletRequest request){
-        model.addAttribute("message", "Hello Lips!");
-        return "index";
+        model.addAttribute("title", "Hello Lips!");
+        return "layouts/main_layout";
     }
 
 }
